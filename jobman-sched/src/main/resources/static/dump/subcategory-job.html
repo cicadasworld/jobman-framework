@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="t.css" title="Style">
+    <script type="text/javascript" src="t.js"></script>
+
+<script type="text/javascript">
+    function do_init()
+    {
+        const list = [
+            'separator',
+            '&nbsp;<a href="{appBaseURL}job/status?debug=1&encoding=utf-8" target="contentFrame">AllJobStatusDO()-JSON</a>',
+            '&nbsp;<a href="joblist.html" target="contentFrame">AllJobStatusDO()-TABLE</a>',        
+            'separator',
+            null
+        ];
+        const main_div = document.getElementById('main_div');
+        dumper_create_links(top.gtdump, main_div, list);
+    }
+</script>
+
+</head>
+
+<body onload="do_init();">
+    <div id="main_div">
+    </div>
+</body>
+</html>

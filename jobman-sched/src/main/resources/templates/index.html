@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>作业调度器</title>
+
+    <script th:inline="javascript" type="text/javascript">
+        window.onload = function() {
+            window.gtdump = {};
+            window.gtdump.appBaseURL = [[@{/}]];
+            do_init();
+        };
+    </script>
+
+    <script type="text/javascript">
+        function do_init()  {
+            const main_div = document.getElementById('main_div');
+            const addr = window.gtdump.appBaseURL + 'scheduler/state/summary?encoding=utf-8&debug=1';
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', addr, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    let html = '<pre>' + xhr.responseText + '</pre>';
+                    main_div.innerHTML = html;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main_div">
+    </div>
+</body>
+</html>
+

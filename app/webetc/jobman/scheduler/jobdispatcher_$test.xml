@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<!-- 作业拆分器配置文件. -->
+
+<plugins>
+    <plugin>
+        <param name="enabled" value="true" />
+        <param name="tag" value="jobDispatcherFactory" />
+        <param name="className" value="gtcloud.jobman.core.test.DummyJobDispatcherFactory" />
+
+        <!-- 插件需要的自定义参数-->>
+        <param name="p1" value="v1" />
+    </plugin>
+
+</plugins>

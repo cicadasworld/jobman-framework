@@ -1,0 +1,48 @@
+[INFO ] 2020-05-27 16:20:51.854 007548 7624
+AppEnv::init() called.
+
+[INFO ] 2020-05-27 16:20:51.901 007548 7624
+HttpAcceptorSocket: waiting connection from client at 0.0.0.0:62510(129.0.3.135:62510).
+
+[INFO ] 2020-05-27 16:20:51.917 007548 4540
+NetSocketManager: event_dispatch_thread_00_plxn_cynosure-httpd start completed.
+
+[INFO ] 2020-05-27 16:20:51.917 007548 7624
+UdpSocket: waiting message at 239.1.1.13:35000(129.0.3.135:35000).
+
+[INFO ] 2020-05-27 16:20:51.932 007548 7624
+CynosureMain: program startup completed in 68(ms).
+
+[INFO ] 2020-05-27 16:20:51.932 007548 1780
+NetSocketManager: event_dispatch_thread_01_plxn_cynosure-httpd start completed.
+
+[INFO ] 2020-05-27 16:21:51.869 007548 5356
+StaleLogFileMoper: stale log files mopping begin...
+
+[INFO ] 2020-05-27 16:21:51.869 007548 5356
+StaleLogFileMoper: stale log files mopping end.
+
+[INFO ] 2020-05-27 16:36:29.909 007548 1780
+CynosureMain: dead app removed: http://129.0.3.135:44850/gtjobsched|JobScheduler.
+
+[INFO ] 2020-05-27 16:36:29.925 007548 1780
+CynosureMain: dead app removed: http://129.0.3.135:50694/gtjobproc|JobProcessor.
+
+[ERROR] 2020-05-27 16:53:19.143 007548 1864
+CynosureMain: signal SIGINT received.
+
+[INFO ] 2020-05-27 16:53:19.174 007548 1864
+CynosureMain: program is going to stop in 2 seconds...
+
+[INFO ] 2020-05-27 16:53:21.202 007548 4540
+NetSocketManager: event_dispatch_thread_00_plxn_cynosure-httpd stop completed.
+
+[INFO ] 2020-05-27 16:53:21.217 007548 1780
+NetSocketManager: event_dispatch_thread_01_plxn_cynosure-httpd stop completed.
+
+[INFO ] 2020-05-27 16:53:21.233 007548 7624
+CynosureMain: program shutdown finished.
+
+[INFO ] 2020-05-27 16:53:21.249 007548 7624
+AppEnv::fini() called.
+

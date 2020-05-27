@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="t.css" title="Style">
+    <script type="text/javascript" src="t.js"></script>
+
+<script type="text/javascript">
+
+
+function do_init()
+{
+    const addr = top.gtdump.appBaseURL + 'geodata/v1/missions?encoding=utf-8';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', addr, true);
+
+    const hasJSON = (typeof JSON === "object");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            if (hasJSON) {
+                var result = JSON.parse(xhr.responseText);
+            } else {
+                var json = 'var result=' + xhr.responseText;
+                eval(json);
+            }
+            if (result.retcode != 0) {
+                alert("Error: " + result.retmsg);
+            } else {
+                var main_div = document.getElementById('main_div');
+                var caption = '&nbsp;&nbsp;Mission列表';
+                dumper_add_section(main_div, caption);
+                dumper_add_separator(main_div);
+                list_missions(main_div, result.retdata);
+            }
+        }
+    };
+    xhr.send();
+}
+
+function list_missions(main_div, missionList)
+{
+    var table = document.createElement('table');
+    table.className = 'mapTable';
+    main_div.appendChild(table);
+
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
+    // title row
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr_0';
+
+    var cols = [
+        "seqNo", "tag", "caption", "missionType", "id", "status", "progress", "itemCount", "JSON"
+    ];
+
+    for (var c = 0; c < cols.length; ++ c) {
+        var td = document.createElement("td");
+        td.className = "mapTd";
+        td.innerHTML = cols[c];
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+
+    var counter = { value: 0 };
+    for (var t=0; t<missionList.length; t++) {
+        var mission = missionList[t];
+        create_mission_row(tbody, mission, cols, counter);
+    }
+}
+
+function create_mission_row(tbody, mission, colNames, counter)
+{
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr';
+    tbody.appendChild(tr);
+
+    for (var i=0; i<colNames.length; ++i) {
+        let colName = colNames[i];
+        let innerHTML = null;
+
+        if (colName == 'seqNo') {
+            innerHTML = '' + counter.value;
+        }
+        else if (colName == 'id') {
+            innerHTML = '' + mission.id;
+        }
+        else if (colName == 'caption') {
+            innerHTML = '' + mission.caption;
+        }
+        else if (colName == 'missionType') {
+            innerHTML = '' + mission.missionType;
+        }
+        else if (colName == 'status') {
+            innerHTML = '' + mission.options.status;
+        }
+        else if (colName == 'progress') {
+            innerHTML = '' + mission.options.progress;
+        }
+        else if (colName == 'JSON') {
+            var alink = '<a href="{appBaseURL}geodata/v1/missions/{missionId}?encoding=utf-8&debug=1" target="_blank">Dump</a>';
+            alink = alink.replace('{appBaseURL}', top.gtdump.appBaseURL);
+            alink = alink.replace('{missionId}', mission.id);
+            innerHTML = '' + alink;
+        }
+        else if (colName == 'tag') {
+            innerHTML = '' + mission.options._missionTag;
+        }
+        else if (colName == 'itemCount') {
+            innerHTML = mission.items ? ('' + mission.items.length) : '0';
+        }
+
+        if (innerHTML != null) {
+            var td = document.createElement("td");
+            if (colName == 'status' && mission.options.status != 'ok') {
+                td.className = 'mapTdWarn';
+            } else {
+                td.className = 'mapTd';
+            }
+            td.innerHTML = innerHTML;
+            tr.appendChild(td);
+        }
+    }
+    counter.value += 1;
+}
+
+</script>
+
+</head>
+
+<body onload="do_init();">
+    <div id="main_div">
+    </div>
+</body>
+</html>

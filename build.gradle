@@ -1,0 +1,12 @@
+subprojects {
+    ext {
+        spring_boot_version = '2.1.9.RELEASE'
+    }
+
+    repositories {
+        maven {
+            name 'Custom Maven Repository'
+            url System.getenv('MAVEN_REPO_HOME')
+        }
+    }
+}

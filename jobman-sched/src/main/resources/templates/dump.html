@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>SchedulerState</title>
+
+    <script th:inline="javascript" type="text/javascript">
+        window.onload = function() {
+            window.gtdump = {};
+            window.gtdump.appBaseURL = [[@{/}]];
+        };
+    </script>
+</head>
+
+<frameset cols="20%,80%">
+    <frameset rows="30%,70%">
+        <frame th:src="@{/dump/category.html}" name="categoryFrame">
+        <frame name="subcategoryFrame">
+    </frameset>
+    <frame name="contentFrame" scrolling="yes">
+</frameset>
+
+</html>

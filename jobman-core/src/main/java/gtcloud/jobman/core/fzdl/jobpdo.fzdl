@@ -1,0 +1,97 @@
+//
+// Copyright (c) 2016-2020 GT Group. All rights reserved.
+//
+#if !PLATON_JOBPDO_INCLUDE
+#define PLATON_JOBPDO_INCLUDE
+
+#include <propset.fzdl>
+
+#if CPP
+@header
+{
+    cpp_header_copy_line_1 = "#include \"platon/scf/freeze/propset.fz.h\"";
+    cpp_header_copy_line_2 = "#include \"platon/scf/freeze/byteseq.fz.h\"";
+    cpp_header_copy_line_3 = "#include \"platon/scf/freeze/stringseq.fz.h\"";
+}
+#endif /*CPP*/
+
+namespace gtcloud.jobman.core.pdo
+{
+    /// 每个作业都必须具有该头部
+    message JobControlBlockDO
+    {
+        /// 当前"作业"的标识，全局唯一, 如'4ea6530716d149429edb5749460938ec'
+        0: string jobId;
+
+        /// 当前"作业"的类别，为固定值，如'IMPORT_IMAGE_DATA'
+        1: string jobCategory;
+
+        /// 当前"作业"的标题, 如'影像产品数据入库-20170427123022'
+        2: string jobCaption;
+
+        /// 当前"作业"的优先级
+        3: int jobPriority;
+
+        /// 其它用于扩展的字段集合
+        4: platon.PropSet options;
+    }
+
+    /// "作业"状态
+    message JobStatusDO
+    {
+        /// 当前"作业"的标识，全局唯一, 如'4ea6530716d149429edb5749460938ec'
+        0: string jobId;
+
+        /// 当前"作业"的类别，如'IMPORT_IMAGE_DATA'
+        1: string jobCategory;
+
+        /// 当前"作业"的标题, 如'影像产品数据入库-20170427123022'
+        2: string jobCaption;
+
+        /// 当前"作业"的总工作量
+        3: double totalWorkload;
+
+        /// 当前"作业"的最近状态码, 0表示正常, 其它值表示发生了错误
+        4: int statusCode;
+
+        /// 当前"作业"的最近状态描述
+        5: string statusMessage;
+
+        /// 当前"作业"目前已经完成的工作量
+        6: double completedWorkload;
+
+        /// 其它用于扩展的字段集合
+        7: platon.PropSet options;
+
+        /// 作业产生的时刻
+        8: long jobEpoch;
+    }
+
+    list<JobStatusDO> JobStatusListDO;
+
+    /// "子作业"处理节点描述对象
+    message SubjobProcessNodeDO
+    {
+        /// 节点标识
+        0: string nodeId;
+
+        /// 支持的作业类型列表
+        1: string[] supportedJobCategoryList;
+
+        /// 距最近活动时刻的毫秒数
+        2: long millisSinceLastAlive;
+
+        /// 当前是否处于活动状态
+        3: bool isAlive;
+
+        /// 当前节点上正在处理(尚未完成)的子作业个数
+        4: int subjobQueueLength;
+
+        /// 其它用于扩展的字段集合
+        5: platon.PropSet options;
+    }
+
+    list<SubjobProcessNodeDO> SubjobProcessNodeListDO;
+}
+
+#endif /*PLATON_JOBPDO_INCLUDE*/

@@ -1,0 +1,6 @@
+include 'jobman-core'
+include 'jobman-sched'
+include 'jobman-proc'
+
+rootProject.name = 'jobman-framework'
+

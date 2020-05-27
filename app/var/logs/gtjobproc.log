@@ -1,0 +1,109 @@
+16:17:57.227 INFO  {main} [g.jobman.proc.JobProcessorApplication] Starting JobProcessorApplication on hujin with PID 6856 (D:\gtcloud\gtcloud-jobman-proc\build\classes\java\main started by hujin in D:\gtcloud)
+16:17:57.243 INFO  {main} [g.jobman.proc.JobProcessorApplication] No active profile set, falling back to default profiles: default
+16:17:58.085 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:17:58.195 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 0 (http)
+16:17:58.210 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
+16:17:58.210 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:17:58.210 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:17:58.335 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring embedded WebApplicationContext
+16:17:58.335 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 1030 ms
+16:17:58.475 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:17:58.678 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
+16:17:58.694 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 50694 (http) with context path '/gtjobproc'
+16:17:58.694 INFO  {main} [g.jobman.proc.JobProcessorApplication] Started JobProcessorApplication in 1.903 seconds (JVM running for 3.333)
+16:17:58.756 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 等待探测服务器完成...
+16:17:58.756 INFO  {CynosureClientWorker} [gtcloud.common.cynosure.CynosureClient] 发送探测请求到(groupAddress=/239.1.1.13:35000, groupName=BzkGroupLocalFS), round=0.
+16:20:54.054 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 成功探测到了服务器, serverAddress=http://129.0.3.135:62510
+16:20:54.163 INFO  {main} [g.j.c.test.DummySubjobProcessorFactory] class gtcloud.jobman.core.test.DummySubjobProcessorFactory.initialize() called.
+16:20:54.163 INFO  {Thread-16} [g.j.c.processor.main.LocalProccessNode] runHeartbeatLoop()线程开始执行.
+16:20:54.163 INFO  {Thread-17} [g.j.c.processor.main.LocalProccessNode] runMessageSendLoop()线程开始执行.
+16:20:55.302 INFO  {http-nio-auto-1-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:20:55.302 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:20:55.302 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:21:10.327 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000001, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:10.343 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000002, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:10.359 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000003, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:10.374 INFO  {Thread-21} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000004, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:10.390 INFO  {Thread-22} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000005, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.359 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000001, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.375 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000002, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.391 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000003, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.406 INFO  {Thread-21} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000004, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.422 INFO  {Thread-22} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000005, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.437 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000006, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.469 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000007, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.515 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000008, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:19.562 INFO  {Thread-21} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000009, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:28.470 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000006, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:28.501 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000007, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:28.548 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000008, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:28.594 INFO  {Thread-21} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000009, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:21:28.672 INFO  {Thread-22} [g.jobman.core.test.DummySubjobProcessor] processReduce() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000000, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:35.372 INFO  {main} [g.jobman.proc.JobProcessorApplication] Starting JobProcessorApplication on hujin with PID 5384 (D:\gtcloud\gtcloud-jobman-proc\build\classes\java\main started by hujin in D:\gtcloud)
+16:36:35.388 INFO  {main} [g.jobman.proc.JobProcessorApplication] No active profile set, falling back to default profiles: default
+16:36:35.918 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:36:36.012 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 0 (http)
+16:36:36.027 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
+16:36:36.027 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:36:36.027 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:36:36.121 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring embedded WebApplicationContext
+16:36:36.121 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 718 ms
+16:36:36.261 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:36:36.433 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
+16:36:36.464 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 50984 (http) with context path '/gtjobproc'
+16:36:36.464 INFO  {main} [g.jobman.proc.JobProcessorApplication] Started JobProcessorApplication in 1.342 seconds (JVM running for 2.021)
+16:36:36.526 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 等待探测服务器完成...
+16:36:36.526 INFO  {CynosureClientWorker} [gtcloud.common.cynosure.CynosureClient] 发送探测请求到(groupAddress=/239.1.1.13:35000, groupName=BzkGroupLocalFS), round=0.
+16:36:36.526 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 成功探测到了服务器, serverAddress=http://129.0.3.135:62510
+16:36:36.558 INFO  {main} [g.j.c.test.DummySubjobProcessorFactory] class gtcloud.jobman.core.test.DummySubjobProcessorFactory.initialize() called.
+16:36:36.558 INFO  {Thread-14} [g.j.c.processor.main.LocalProccessNode] runHeartbeatLoop()线程开始执行.
+16:36:36.558 INFO  {Thread-15} [g.j.c.processor.main.LocalProccessNode] runMessageSendLoop()线程开始执行.
+16:36:37.743 INFO  {http-nio-auto-1-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:36:37.759 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:36:37.759 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:36:37.806 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processReduce() begin, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000000, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.529 INFO  {Thread-17} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000001, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.544 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000002, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.560 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000003, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.576 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000004, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.841 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processReduce() done, subjobKey=b4bba447-7b1c-4a5b-b2e7-d2f4632be757/000000, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:46.934 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000005, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.561 INFO  {Thread-17} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000001, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.576 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000002, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.592 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000003, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.608 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000004, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.623 INFO  {Thread-17} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000006, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.670 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000007, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.717 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000008, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.764 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000009, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:36:55.966 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000005, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:04.655 INFO  {Thread-17} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000006, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:04.702 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000007, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:04.749 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000008, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:04.796 INFO  {Thread-20} [g.jobman.core.test.DummySubjobProcessor] processSubjob() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000009, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:04.874 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processReduce() begin, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000000, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:37:13.906 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processReduce() done, subjobKey=7a45d822-6476-4c94-9022-3b2e65f859f4/000000, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:44:22.592 INFO  {main} [g.jobman.proc.JobProcessorApplication] Starting JobProcessorApplication on hujin with PID 8184 (D:\jobman\jobman-proc\build\classes\java\main started by hujin in D:\jobman)
+16:44:22.608 INFO  {main} [g.jobman.proc.JobProcessorApplication] No active profile set, falling back to default profiles: default
+16:44:23.138 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:44:23.247 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 0 (http)
+16:44:23.247 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
+16:44:23.263 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:44:23.263 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:44:23.357 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring embedded WebApplicationContext
+16:44:23.357 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 734 ms
+16:44:23.497 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:44:23.684 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
+16:44:23.700 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 51075 (http) with context path '/gtjobproc'
+16:44:23.700 INFO  {main} [g.jobman.proc.JobProcessorApplication] Started JobProcessorApplication in 1.373 seconds (JVM running for 2.061)
+16:44:23.778 INFO  {main} [g.j.c.test.DummySubjobProcessorFactory] class gtcloud.jobman.core.test.DummySubjobProcessorFactory.initialize() called.
+16:44:23.778 INFO  {Thread-13} [g.j.c.processor.main.LocalProccessNode] runHeartbeatLoop()线程开始执行.
+16:44:23.778 INFO  {Thread-14} [g.j.c.processor.main.LocalProccessNode] runMessageSendLoop()线程开始执行.
+16:44:24.979 INFO  {http-nio-auto-1-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobproc]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:44:24.979 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:44:24.995 INFO  {http-nio-auto-1-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:44:37.758 INFO  {Thread-15} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=46916dd7-d60a-4795-8f7e-6f844a9bb7f1/000001, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:44:37.774 INFO  {Thread-16} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=46916dd7-d60a-4795-8f7e-6f844a9bb7f1/000002, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:44:37.789 INFO  {Thread-17} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=46916dd7-d60a-4795-8f7e-6f844a9bb7f1/000003, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:44:37.805 INFO  {Thread-18} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=46916dd7-d60a-4795-8f7e-6f844a9bb7f1/000004, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1
+16:44:37.820 INFO  {Thread-19} [g.jobman.core.test.DummySubjobProcessor] processSubjob() begin, subjobKey=46916dd7-d60a-4795-8f7e-6f844a9bb7f1/000005, jobCate=DUMMY_JOB_CATEGORY, subJobPriority=1

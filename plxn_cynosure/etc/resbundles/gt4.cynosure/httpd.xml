@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<CynosureServerConfiguration>
+    <!-- 配置httpservice需要的参数. -->
+    <params>
+        <param name="httpd.name" value="GTTech Cynosure Server" />
+
+        <!-- http服务地址, 使用随机的端口号 -->
+        <param name="httpd.listenAddress" value="0.0.0.0:62510" />
+
+        <param name="httpd.threadPoolSize" value="1" />
+        <param name="httpd.webAppContext" value="" />
+
+        <!-- 是否在日志中dump出各个请求的URL. 主要用于辅助调试, 生产环境应关闭. -->
+        <!-- 取值为0关闭; 取值为1则dump出URI; 取值为2则dump出URI+HTTP-Headers. -->
+        <param name="httpd.dumpRequest" value="0" />
+
+        <!-- 欢迎页面. -->
+        <param name="httpd.welcomePage" value="/index.html" />
+
+        <!-- 文档根列表. 若需要提供.html, .css等文件类服务, 应正确配置该参数，否则可以忽略. -->
+        <param name="httpd.docRoot" value="${exeEtcDir}/resbundles/${currentResBundleId}/doc4web" />
+        <!--
+        <param name="httpd.docRoot.01" value="/home/server/doc1" />
+        <param name="httpd.docRoot.02" value="/home/server/doc2" />
+        -->
+    </params>
+</CynosureServerConfiguration>

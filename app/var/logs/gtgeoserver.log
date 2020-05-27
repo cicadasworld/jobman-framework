@@ -1,0 +1,249 @@
+10:45:57.954 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$18442f61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:45:58.143 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+10:46:06.603 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+10:46:06.685 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$18442f61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:46:06.779 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+10:46:07.020 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+10:46:07.034 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+10:46:07.045 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+10:46:07.045 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+10:46:07.323 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+10:46:07.323 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 9157 ms
+10:46:07.447 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+10:46:07.621 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+10:46:19.796 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+10:46:20.047 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:46:20.047 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:46:20.054 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:46:20.054 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:46:20.212 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+10:46:20.924 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+10:46:20.943 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+10:46:21.000 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 23.887 seconds (JVM running for 24.851)
+10:46:21.148 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles begin...
+10:46:23.130 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:24.140 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:25.152 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:25.160 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:46:31.176 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:32.189 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:33.204 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:33.208 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:46:39.226 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:40.239 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:41.252 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:41.254 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:46:47.268 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:48.281 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:49.284 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:49.286 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:46:55.310 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:56.325 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:57.341 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:46:57.345 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:46:59.472 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles done.
+10:46:59.507 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles begin...
+10:47:01.876 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles done.
+10:47:01.902 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles begin...
+10:47:01.907 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles done.
+10:47:01.994 INFO  {Thread-12} [gtcloud.common.sqlite.TdbCxnPool] connection eliminater thread begin running...
+10:47:02.088 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪...
+10:47:02.088 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪成功完成。
+10:47:03.360 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:04.375 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:05.378 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:05.379 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:47:11.394 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:12.409 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:13.424 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:13.428 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:47:19.444 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:20.447 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:21.458 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:47:21.459 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:48:55.589 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a6114ca0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:48:55.767 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+10:48:56.823 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+10:48:56.898 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a6114ca0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:48:57.002 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+10:48:57.234 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+10:48:57.249 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+10:48:57.259 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+10:48:57.259 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+10:48:57.538 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+10:48:57.538 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 1755 ms
+10:48:57.631 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+10:48:57.784 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+10:49:09.746 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+10:49:09.930 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:49:09.931 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:49:09.937 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:49:09.938 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:49:10.100 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+10:49:10.762 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+10:49:10.802 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+10:49:10.870 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 16.03 seconds (JVM running for 16.847)
+10:49:10.922 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles begin...
+10:49:11.930 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles done.
+10:49:11.931 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles begin...
+10:49:12.049 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles done.
+10:49:12.050 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles begin...
+10:49:12.052 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles done.
+10:49:12.084 INFO  {Thread-12} [gtcloud.common.sqlite.TdbCxnPool] connection eliminater thread begin running...
+10:49:12.177 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪...
+10:49:12.177 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪成功完成。
+10:49:12.940 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:13.960 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:14.975 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:14.982 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:49:20.999 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:22.014 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:23.029 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:49:23.033 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+10:55:45.260 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1ddd4860] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:55:45.430 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+10:55:46.467 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+10:55:46.554 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1ddd4860] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:55:46.647 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+10:55:46.880 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+10:55:46.896 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+10:55:46.906 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+10:55:46.906 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+10:55:47.196 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+10:55:47.196 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 1753 ms
+10:55:47.285 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+10:55:47.425 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+10:55:59.371 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+10:55:59.549 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:55:59.550 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:55:59.556 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+10:55:59.557 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:55:59.708 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+10:56:00.422 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+10:56:00.442 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+10:56:00.512 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 16.008 seconds (JVM running for 16.815)
+10:56:00.567 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles begin...
+10:56:01.565 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles done.
+10:56:01.567 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles begin...
+10:56:01.685 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles done.
+10:56:01.686 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles begin...
+10:56:01.688 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles done.
+10:56:01.718 INFO  {Thread-12} [gtcloud.common.sqlite.TdbCxnPool] connection eliminater thread begin running...
+10:56:01.807 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪...
+10:56:01.807 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪成功完成。
+10:56:02.585 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+10:56:03.600 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:15:11.340 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$da63a7c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:15:16.443 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+14:16:14.732 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+14:16:19.215 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$da63a7c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:16:23.429 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+14:16:31.504 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+14:16:31.965 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+14:16:32.534 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+14:16:32.550 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+14:16:40.172 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+14:16:40.187 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 83034 ms
+14:16:44.728 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+14:16:49.450 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14:17:14.053 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+14:17:29.042 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:17:29.042 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:17:29.193 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:17:29.197 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:17:38.596 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+14:18:10.660 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+14:18:11.206 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+14:18:11.347 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 197.332 seconds (JVM running for 254.041)
+14:22:56.874 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles begin...
+14:22:57.857 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles done.
+14:22:57.857 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles begin...
+14:22:57.976 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles done.
+14:22:57.976 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles begin...
+14:22:57.976 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles done.
+14:22:58.566 INFO  {Thread-12} [gtcloud.common.sqlite.TdbCxnPool] connection eliminater thread begin running...
+14:22:58.858 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:22:59.874 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:00.876 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:00.878 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:23:06.891 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:07.893 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:08.945 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:08.945 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:23:13.624 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪...
+14:23:13.624 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪成功完成。
+14:23:14.974 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:15.978 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:16.979 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:16.984 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:23:23.035 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:24.050 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:25.066 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:25.066 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:23:31.069 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:32.125 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:23:41.375 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f9315b9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:23:41.567 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+14:23:46.393 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+14:23:46.477 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f9315b9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:23:46.567 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+14:23:46.844 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+14:23:46.859 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+14:23:46.875 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+14:23:46.875 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+14:23:47.221 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+14:23:47.221 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 5612 ms
+14:23:47.344 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+14:23:47.480 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14:23:59.536 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+14:23:59.723 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:23:59.724 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:23:59.731 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:23:59.732 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:23:59.962 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+14:24:00.694 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+14:24:00.723 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+14:24:00.801 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 20.244 seconds (JVM running for 24.361)
+14:27:17.077 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles begin...
+14:27:18.068 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\全球影像.tfiles done.
+14:27:18.068 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles begin...
+14:27:18.180 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\image\矢量地图.tfiles done.
+14:27:18.180 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles begin...
+14:27:18.180 INFO  {Thread-10} [g.g.apprepo.raster.tdb.TdbRasterManifest] scanTdbFiles() in dir D:\GTGEODATA\dem\全球3秒DEM.tfiles done.
+14:27:18.756 INFO  {Thread-12} [gtcloud.common.sqlite.TdbCxnPool] connection eliminater thread begin running...
+14:27:19.059 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:20.076 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:21.107 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:21.107 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:27:27.149 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:28.171 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:29.196 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:29.196 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:27:33.878 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪...
+14:27:33.881 INFO  {main} [g.g.a.resman.GeoEntityManager_MdRepo] 等待元数据库就绪成功完成。
+14:27:35.202 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:36.197 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:37.199 ERROR {Thread-9} [gtcloud.common.dglm.DglmServerNode] getServerRunningMode() error: Failed to connect to /127.0.0.1:58091
+14:27:37.204 ERROR {Thread-9} [gtcloud.GeoServerApplication] 严重错误: 找不到有效KEY, 地图服务器将不能正常提供服务。
+14:28:16.961 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2efa61c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:17.167 INFO  {main} [gtcloud.GeoServerApplication] No active profile set, falling back to default profiles: default
+14:28:20.864 INFO  {main} [o.s.cloud.context.scope.GenericScope] BeanFactory id=78b89260-2d0f-3b84-821d-98a00029c690
+14:28:20.961 INFO  {main} [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2efa61c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:28:21.062 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+14:28:21.305 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44848 (http)
+14:28:21.339 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44848"]
+14:28:21.355 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+14:28:21.355 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+14:28:21.667 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtgeoserver]] Initializing Spring embedded WebApplicationContext
+14:28:21.667 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 4484 ms
+14:28:21.741 INFO  {main} [gtcloud.geodata.datastore.HdfsStore] hdfs conf={key=value}
+14:28:21.892 WARN  {main} [org.apache.hadoop.util.NativeCodeLoader] Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14:28:33.974 WARN  {main} [o.a.h.h.shortcircuit.DomainSocketFactory] The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+14:28:34.168 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:28:34.168 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:28:34.183 WARN  {main} [c.n.c.sources.URLConfigurationSource] No URLs will be polled as dynamic configuration sources.
+14:28:34.183 INFO  {main} [c.n.c.sources.URLConfigurationSource] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:28:34.394 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+14:28:35.136 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44848"]
+14:28:35.168 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44848 (http) with context path '/gtgeoserver'
+14:28:35.215 INFO  {main} [gtcloud.GeoServerApplication] Started GeoServerApplication in 19.074 seconds (JVM running for 22.679)

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<!-- 子作业处理器配置文件. -->
+
+<plugins>
+    <plugin>
+        <param name="enabled" value="true" />
+        <param name="tag" value="subjobProcessorFactory" />
+        <param name="className" value="gtcloud.jobman.core.test.DummySubjobProcessorFactory" />
+
+        <!-- 插件需要的自定义参数-->>
+        <param name="p1" value="v1" />
+    </plugin>
+
+</plugins>
+

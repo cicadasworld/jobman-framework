@@ -1,0 +1,70 @@
+//
+// Copyright (c) 2016-2020 GT Group. All rights reserved.
+//
+#if !PLATON_SCHED_DUMPSTATE_PDO_INCLUDE
+#define PLATON_SCHED_DUMPSTATE_PDO_INCLUDE
+
+#include <propset.fzdl>
+#include "jobpdo.fzdl"
+#include "schedpdo.fzdl"
+
+namespace gtcloud.jobman.core.pdo
+{
+    message SchedulerStateSummaryDO
+    {
+        /// 已经完成的作业
+        0: int totalFinishedJobCount;
+        1: int failureFinishedJobCount;
+        2: int successFinishedJobCount;
+
+        /// 尚未完成的作业
+        3: int totalPendingJobCount;
+
+        /// 核心队列的长度
+        6: int waitingQueueLength;
+        7: int sendingQueueLength;
+        8: int dispatchedQueueLength;
+        9: int retryQueueLength;
+
+        /// 处理节点状态
+        10: SubjobProcessNodeListDO processNodes;
+
+        /// 其它用于扩展的字段集合
+        11: platon.PropSet options;
+    }
+
+    message SubjobDumpStateDO
+    {
+        // 子作业控制块
+        0: SubjobControlBlockDO subjobCB;
+
+        // 重试次数
+        // 上次加入到"重试队列"的时刻
+        1: int retryTimes;
+        2: long whenLastEnterRetryQueue;
+
+        3: long bornTime;
+        4: long finishedTime;
+
+        // 子作业的当前状态, JobState.PENDING,...
+        5: string state;
+
+        // 是否是从持久队列中恢复的子作业(前世保存下来的)
+        6: bool restored;
+
+        7: double totalWorkload;
+        8: double completedWorkload;
+
+        // "子作业"的最近状态描述
+        9: int lastStatusCode;
+        10: string lastStatusMessage;
+
+        /// 其它用于扩展的字段集合
+        11: platon.PropSet options;
+    }
+    
+    list<SubjobDumpStateDO> SubjobDumpStateListDO;
+}
+
+#endif /*PLATON_SCHED_DUMPSTATE_PDO_INCLUDE*/
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>错误信息</title>
+</head>
+<body>
+	<table border="1">
+		<tr><td>code:</td><td><span th:text="${status}">code</span></td></tr>
+		<tr><td>error:</td><td><span th:text="${error}">error</span></td></tr>
+		<tr><td>message:</td><td><span th:text="${message}">message</span></td></tr>
+		<tr><td>url:</td><td><span th:text="${path}">url</span></td></tr>
+	</table>
+</body>
+</html>

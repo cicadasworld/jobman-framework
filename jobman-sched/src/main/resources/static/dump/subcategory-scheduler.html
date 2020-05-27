@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="t.css" title="Style">
+    <script type="text/javascript" src="t.js"></script>
+
+<script type="text/javascript">
+
+function do_init()
+{
+    var list = [
+        'separator',
+        '&nbsp;<a href="{appBaseURL}scheduler/state/summary?encoding=utf-8&debug=1" target="contentFrame">getSchedulerStateSummaryDO()</a>',
+        'separator',
+        null
+    ];
+
+    var main_div = document.getElementById('main_div');
+    dumper_create_links(top.gtdump, main_div, list);
+}
+
+</script>
+
+</head>
+
+<body onload="do_init();">
+    <div id="main_div">
+    </div>
+</body>
+</html>

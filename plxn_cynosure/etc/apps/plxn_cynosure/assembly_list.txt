@@ -1,0 +1,12 @@
+##
+## THIS FILE WAS GENERATED AT 2020/05/20 18:08:54 AUTOMATICALLY.
+##
+## 该文件配置当前app中需要加载的组件. 配置方式为:
+##  每行配置一个组件对应的DLL;
+##  以# 或 // 打头的行为注释行, 将被忽略;
+##  空白行将被忽略.
+##
+#foo.dll
+#D:\bzkmasterlocalfs-0.1-localfs-20200213\bzkmasterlocalfs/foo.dll
+#D:\bzkmasterlocalfs-0.1-localfs-20200213\bzkmasterlocalfs/bar.so
+

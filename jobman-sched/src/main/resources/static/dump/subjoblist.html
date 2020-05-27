@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="t.css" title="Style">
+    <script type="text/javascript" src="t.js"></script>
+
+<script type="text/javascript">
+
+
+function do_init()
+{
+    var queryParam = {};
+    do {
+        var q = window.location.search.substring(1); //jobId=91a0097d824f4590568474579165ee4d
+        var kvps = q.split('&');
+        for (var i=0, ii=kvps.length; i<ii; ++i) {
+            var vec = kvps[i].split('=');
+            var k = vec[0];
+            if (vec.length == 2) {
+                var v = vec[1];
+                queryParam[k] = v;
+            } else {
+                queryParam[k] = '1';
+            }
+        }
+    } while(false);
+
+    var jobId = queryParam['jobId'];
+    var appBaseURL = queryParam['appBaseURL'];
+    const addr = appBaseURL + 'scheduler/state/allsubjobs/{jobId}?debug=1&encoding=utf-8'.replace('{jobId}', jobId);
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', addr, true);
+
+    const hasJSON = (typeof JSON === "object");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            if (hasJSON) {
+                var result = JSON.parse(xhr.responseText);
+            } else {
+                var json = 'var result=' + xhr.responseText;
+                eval(json);
+            }
+            if (result.retcode != 0) {
+                alert("Error: " + result.retmsg);
+            } else {
+                var main_div = document.getElementById('main_div');
+                var caption = '&nbsp;&nbsp;子作业列表';
+                dumper_add_section(main_div, caption);
+                dumper_add_separator(main_div);
+                list_subjobs(main_div, result.retdata, appBaseURL);
+            }
+        }
+    };
+    xhr.send();
+}
+
+function list_subjobs(main_div, subjobList, appBaseURL)
+{
+    var table = document.createElement('table');
+    table.className = 'mapTable';
+    main_div.appendChild(table);
+
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
+    // title row
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr_0';
+
+    var cols = [
+        "seqNo", "retryTimes", "state", "progress", "start", "end", "elapsed", "isReduce", "statusCode", "statusMsg", "restored", "eventLogs"
+    ];
+
+    for (var c = 0; c < cols.length; ++ c) {
+        var td = document.createElement("td");
+        td.className = "mapTd";
+        td.innerHTML = cols[c];
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+
+    for (var t=0; t<subjobList.length; t++) {
+        var subjob = subjobList[t];
+        create_subjob_row(tbody, subjob, cols, appBaseURL);
+    }
+}
+
+function create_subjob_row(tbody, subjob, colNames, appBaseURL)
+{
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr';
+    tbody.appendChild(tr);
+
+    for (var i=0; i<colNames.length; ++i) {
+        let colName = colNames[i];
+        let innerHTML = null;
+
+        if (colName == 'seqNo') {
+            innerHTML = '' + subjob.subjobCB.subjobSeqNo;
+        }
+        else if (colName == 'state') {
+            innerHTML = '' + subjob.state;
+        }
+        else if (colName == 'retryTimes') {
+            innerHTML = '' + subjob.retryTimes;
+        }
+        else if (colName == 'progress') {
+            let percent = (100 * parseFloat(subjob.completedWorkload) / parseFloat(subjob.totalWorkload)).toFixed(2);
+            innerHTML = '' + percent + '%';
+        }
+
+        else if (colName == 'start') {
+            let t = new Date(parseInt(subjob.bornTime));
+            innerHTML = '' + dumper_format_date(t);
+        }
+        else if (colName == 'end') {
+            let t = new Date(parseInt(subjob.finishedTime || 0));
+            if (t > 0) {
+                innerHTML = '' + dumper_format_date(t);
+            } else {
+                innerHTML = 'N/A';
+            }
+        }
+        else if (colName == 'elapsed') {
+            let t0 = parseInt(subjob.bornTime);
+            let t1 = parseInt(subjob.finishedTime || 0);
+            if (t1 > 0) {
+                innerHTML = '' + dumper_format_timespan(t1 - t0);
+            } else {
+                innerHTML = 'N/A';
+            }
+        }
+
+        else if (colName == 'isReduce') {
+            innerHTML = '' + subjob.subjobCB.isReduce;
+        }
+        else if (colName == 'restored') {
+            innerHTML = '' + subjob.restored;
+        }
+
+        else if (colName == 'statusCode') {
+            innerHTML = '' + (subjob.lastStatusCode || 0);
+        }
+        else if (colName == 'statusMsg') {
+            innerHTML = '' + (subjob.lastStatusMessage || '');
+        }
+        else if (colName == 'eventLogs') {
+            var alink = '<a href="{appBaseURL}scheduler/state/subjobeventlog/{jobId}/{subjobSeqNo}?encoding=utf-8&debug=1" target="_blank">Dump</a>';
+            alink = alink.replace('{appBaseURL}', appBaseURL);
+            alink = alink.replace('{jobId}', subjob.subjobCB.jobId);
+            alink = alink.replace('{subjobSeqNo}', subjob.subjobCB.subjobSeqNo);
+            innerHTML = '' + alink;
+        }
+
+        if (innerHTML != null) {
+            var td = document.createElement("td");
+            if (colName == 'state' && subjob.state == 'FINISHED_FAILED') {
+                td.className = 'mapTdWarn';
+            } else {
+                td.className = 'mapTd';
+            }
+            td.innerHTML = innerHTML;
+            tr.appendChild(td);
+        }
+    }
+}
+
+</script>
+
+</head>
+
+<body onload="do_init();">
+    <div id="main_div">
+    </div>
+</body>
+</html>

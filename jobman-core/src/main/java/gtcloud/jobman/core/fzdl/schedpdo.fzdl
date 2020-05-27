@@ -1,0 +1,200 @@
+//
+// Copyright (c) 2016-2020 GT Group. All rights reserved.
+//
+#if !PLATON_SCHED_PDO_INCLUDE
+#define PLATON_SCHED_PDO_INCLUDE
+
+#include <propset.fzdl>
+
+namespace gtcloud.jobman.core.pdo
+{
+    constants Phase
+    {
+        int PHASE_BEGIN = 100;
+        int PHASE_INPROGRESS = 101;
+        int PHASE_DONE = 102;
+    }
+
+    /// 全局调度节点向处理节点分派的"子作业"数据对象头部
+    message SubjobControlBlockDO
+    {
+        /// 主"作业"的标识，全局唯一, 如'4ea6530716d149429edb5749460938ec'
+        0: string jobId;
+
+        /// 主"作业"的类别，为固定值，如'IMPORT_IMAGE_DATA'
+        1: string jobCategory;
+
+        /// 主"作业"的标题, 如'影像产品数据入库-20170427123022'
+        2: string jobCaption;
+
+        /// 主"作业"的优先级
+        3: int jobPriority;
+
+        /// 所属主"作业"共拆分成了几个子作业
+        4: int subjobCount;
+
+        /// 当前"子作业"的序号, 从0开始
+        5: int subjobSeqNo;
+
+        /// 当前"子作业"是否为收敛作业
+        6: bool isReduce;
+
+        /// 其它用于扩展的字段集合
+        7: platon.PropSet options;
+    }
+
+    /// 作业类别
+    message JobCategoryDO
+    {
+        /// 作业类别
+        0: string jobCategory;
+    }
+
+    list<JobCategoryDO> JobCategoryListDO;
+
+    /// 处理节点向全局调度节点进行"签到请求"的数据对象
+    message LogonReqDO
+    {
+        /// 请求序列号
+        0: string seqNo;
+
+        /// 当前"处理节点"的标识
+        1: string nodeId;
+
+        /// 当前"处理节点"的世代(即启动时的时间戳), 用来区分不同的进程
+        2: long nodeEpoch;
+
+        /// 当前"处理节点"支持的作业类别
+        3: JobCategoryListDO jobCategoryList;
+
+        /// 其它用于扩展的字段集合
+        4: platon.PropSet options;
+    }
+
+    /// 全局调度节点向处理节点进行"签到应答"的数据对象
+    message LogonAckDO
+    {
+        /// 请求时的序列号, 此处原样返回
+        0: string seqNo;
+
+        /// 心跳报告间隔, 单位为毫秒
+        1: int heartbeatIntervalMillis;
+
+        /// 发出该应答的全局调度器的实例标识
+        2: string schedulerId;
+
+        /// 其它用于扩展的字段集合
+        3: platon.PropSet options;
+    }
+
+    /// 处理节点向全局调度节点进行"签退"的数据对象
+    message LogoffDO
+    {
+        /// 当前"处理节点"的标识
+        0: string nodeId;
+
+        /// 当初登录时获知的全局调度器实例标识
+        1: string schedulerId;
+    }
+
+    /// 处理节点向全局调度节点报告"心跳"的数据对象
+    message HeartbeatReportReqDO
+    {
+        /// 请求序列号
+        0: string seqNo;
+
+        /// 当前"处理节点"的标识
+        1: string nodeId;
+
+        /// 当初登录时获知的全局调度器实例标识
+        2: string schedulerId;
+
+        /// 其它用于扩展的字段集合
+        3: platon.PropSet options;
+    }
+
+    message HeartbeatReportAckDO
+    {
+        /// 请求时的序列号, 此处原样返回
+        0: string seqNo;
+
+        /// 发出该应答的全局调度器的实例标识
+        1: string schedulerId;
+
+        /// 其它用于扩展的字段集合
+        2: platon.PropSet options;
+    }
+
+    /// 子作业中各处理步骤的进度
+    constants StepTag
+    {
+        int BEGIN = 1;
+        int END = 2;
+    }
+
+    /// 子作业状态数据对象
+    message SubjobStatusDO
+    {
+        /// "子作业"的最近状态码, 0表示正常, 其它值表示发生了错误
+        0: int statusCode;
+
+        /// "子作业"的最近状态描述
+        1: string statusMessage;
+
+        /// "子作业"目前已经完成的工作量
+        2: double completedWorkload;
+
+        /// 子作业执行的当前阶段: Phase.PHASE_BEGIN, PHASE_DONE, ...
+        3: int phase;
+
+        /// 其它用于扩展的字段集合
+        4: platon.PropSet options;
+
+        /// 子作业的当前处理步骤的标识
+        5: string stepId;
+
+        /// 子作业的当前处理步骤的标签，取值为StepTag.BEGIN和StepTag.END的比特位的或
+        /// 若含StepTag.BEGIN，表示步骤开始
+        /// 若含StepTag.END，表示步骤结束
+        6: int stepTag;
+    }
+
+    /// 处理节点向全局调度节点报告"进度"的数据对象
+    message SubjobStatusReportDO
+    {
+        /// "处理节点"的标识
+        0: string nodeId;
+
+        /// 作业类别
+        1: string jobCategory;
+
+        /// 当前"作业"的标识，全局唯一, 如'4ea6530716d149429edb5749460938ec'
+        2: string jobId;
+
+        /// 当前"子作业"的序号, 从0开始
+        3: int subjobSeqNo;
+
+        /// 子作业状态
+        4: SubjobStatusDO statusDO;
+    }
+
+    message SubjobDispatchAckDO
+    {
+        /// 当前"处理节点"的标识
+        0: string nodeId;
+
+        /// 当初登录时获知的全局调度器实例标识
+        1: string schedulerId;
+
+        /// "作业"的标识
+        2: string jobId;
+
+        /// "子作业"的序号
+        3: int subjobSeqNo;
+
+        /// 作业类别
+        4: string jobCategory;
+    }
+}
+
+#endif /*PLATON_SCHED_PDO_INCLUDE*/

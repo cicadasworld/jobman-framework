@@ -1,0 +1,67 @@
+//
+// Copyright (c) 2016-2020 GT Group. All rights reserved.
+//
+#if !MISSION_MANAGMENT_INCLUDE
+#define MISSION_MANAGMENT_INCLUDE
+
+#include <propset.fzdl>
+
+#if CPP
+@header
+{
+    //cpp_header_copy_line_1 = "#include \"platon/scf/freeze/propset.fz.h\"";
+}
+#endif /*CPP*/
+
+namespace gtcloud.jobman.core.scheduler.mission.pdo
+{
+    /// 任务项
+    message AdminMissionItemDO
+    {
+        /// 任务项ID, 对应subjob的ID, 构成为"jobId|subjobSeqNo"
+        0: string id;
+
+        /// 所属任务ID（即批次号，对应job的ID）
+        1: string missionId;
+
+        /// 关联的地理资源ID
+        2: string geoEntityId;
+
+        /// 扩展用属性
+        3: platon.PropSet options;
+    }
+
+    list<AdminMissionItemDO> AdminMissionItemListDO;
+
+    /// 任务信息
+    message AdminMissionDO
+    {
+        /// 所属任务ID（即批次号，对应job的ID）
+        0: string id;
+
+        /// 任务描述
+        1: string caption;
+
+        /// 任务类型, 对应jobCategory
+        2: string missionType;
+
+        /// 任务提交时刻, 对应job的bornTime
+        3: long missionEpoch;
+
+        /// 提交者用户ID
+        4: string submitterUserId;
+
+        // 提交者的机器IP
+        5: string submitterHost;
+
+        /// 包含哪些任务项
+        6: AdminMissionItemListDO items;
+
+        /// 扩展用属性
+        7: platon.PropSet options;
+    }
+
+    list<AdminMissionDO> AdminMissionListDO;
+}
+
+#endif /*MISSION_MANAGMENT_INCLUDE*/

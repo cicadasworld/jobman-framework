@@ -1,0 +1,102 @@
+16:17:35.728 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Starting JobSchedulerApplication on hujin with PID 5536 (D:\gtcloud\gtcloud-jobman-sched\build\classes\java\main started by hujin in D:\gtcloud)
+16:17:35.744 INFO  {main} [g.jobman.sched.JobSchedulerApplication] No active profile set, falling back to default profiles: default
+16:17:36.773 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:17:36.914 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44850 (http)
+16:17:36.929 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44850"]
+16:17:36.929 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:17:36.929 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:17:37.054 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring embedded WebApplicationContext
+16:17:37.054 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 1232 ms
+16:17:37.241 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:17:37.319 INFO  {main} [o.s.b.a.w.s.WelcomePageHandlerMapping] Adding welcome page template: index
+16:17:37.507 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44850"]
+16:17:37.538 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44850 (http) with context path '/gtjobsched'
+16:17:37.538 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Started JobSchedulerApplication in 2.309 seconds (JVM running for 3.852)
+16:17:37.631 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 等待探测服务器完成...
+16:17:37.631 INFO  {CynosureClientWorker} [gtcloud.common.cynosure.CynosureClient] 发送探测请求到(groupAddress=/239.1.1.13:35000, groupName=BzkGroupLocalFS), round=0.
+16:18:38.367 INFO  {http-nio-44850-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:18:38.367 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:18:38.367 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:18:38.382 ERROR {http-nio-44850-exec-1} [g.jobman.sched.JobSchedulerController] exception caught: null
+16:19:03.813 ERROR {http-nio-44850-exec-3} [g.jobman.sched.JobSchedulerController] exception caught: null
+16:19:52.440 ERROR {http-nio-44850-exec-5} [g.jobman.sched.JobSchedulerController] exception caught: null
+16:20:52.946 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 成功探测到了服务器, serverAddress=http://129.0.3.135:62510
+16:20:52.962 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 开始archive()...
+16:20:52.962 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 结束archive().
+16:20:53.071 INFO  {main} [g.j.core.test.DummyJobDispatcherFactory] class gtcloud.jobman.core.test.DummyJobDispatcherFactory.initialize() called.
+16:20:53.071 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] runCommandLoop() begin, interval=10000(ms)
+16:21:10.062 INFO  {Thread-16} [g.jobman.core.test.DummyJobDispatcher] splitJob() called, jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, jobCate=DUMMY_JOB_CATEGORY
+16:21:10.327 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=1/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:10.343 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=2/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:10.359 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=3/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:10.374 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=4/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:10.390 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=5/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:19.437 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=6/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:19.469 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=7/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:19.515 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=8/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:19.562 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=9/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:21:28.672 INFO  {Thread-16} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=0/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:28.724 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Starting JobSchedulerApplication on hujin with PID 1800 (D:\gtcloud\gtcloud-jobman-sched\build\classes\java\main started by hujin in D:\gtcloud)
+16:36:28.724 INFO  {main} [g.jobman.sched.JobSchedulerApplication] No active profile set, falling back to default profiles: default
+16:36:29.285 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:36:29.379 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44850 (http)
+16:36:29.379 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44850"]
+16:36:29.394 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:36:29.394 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:36:29.472 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring embedded WebApplicationContext
+16:36:29.472 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 733 ms
+16:36:29.613 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:36:29.660 INFO  {main} [o.s.b.a.w.s.WelcomePageHandlerMapping] Adding welcome page template: index
+16:36:29.831 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44850"]
+16:36:29.862 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44850 (http) with context path '/gtjobsched'
+16:36:29.862 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Started JobSchedulerApplication in 1.404 seconds (JVM running for 2.118)
+16:36:29.909 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 等待探测服务器完成...
+16:36:29.909 INFO  {CynosureClientWorker} [gtcloud.common.cynosure.CynosureClient] 发送探测请求到(groupAddress=/239.1.1.13:35000, groupName=BzkGroupLocalFS), round=0.
+16:36:29.925 INFO  {main} [gtcloud.common.cynosure.CynosureClient] 成功探测到了服务器, serverAddress=http://129.0.3.135:62510
+16:36:29.925 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 开始archive()...
+16:36:29.925 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 结束archive().
+16:36:30.018 INFO  {main} [g.j.core.test.DummyJobDispatcherFactory] class gtcloud.jobman.core.test.DummyJobDispatcherFactory.initialize() called.
+16:36:30.018 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] runCommandLoop() begin, interval=10000(ms)
+16:36:35.044 WARN  {Thread-11} [g.j.core.scheduler.main.JobScheduler] 当前没有可用的作业处理节点, 无法调度子作业。
+16:36:37.681 INFO  {http-nio-44850-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:36:37.681 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:36:37.681 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:36:37.806 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=b4bba447-7b1c-4a5b-b2e7-d2f4632be757, seq=0/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:46.232 INFO  {Thread-11} [g.jobman.core.test.DummyJobDispatcher] splitJob() called, jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, jobCate=DUMMY_JOB_CATEGORY
+16:36:46.529 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=1/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:46.544 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=2/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:46.560 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=3/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:46.576 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=4/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:46.934 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=5/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:55.623 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=6/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:55.670 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=7/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:55.717 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=8/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:36:55.764 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=9/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:37:04.874 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=7a45d822-6476-4c94-9022-3b2e65f859f4, seq=0/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-4772e8e81c5399a8-d] OK.
+16:43:46.063 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Starting JobSchedulerApplication on hujin with PID 4440 (D:\jobman\jobman-sched\build\classes\java\main started by hujin in D:\jobman)
+16:43:46.063 INFO  {main} [g.jobman.sched.JobSchedulerApplication] No active profile set, falling back to default profiles: default
+16:43:46.624 INFO  {main} [gtcloud.springutils.TomcatCustomizer] Customize tomcat-embed...
+16:43:46.718 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 44850 (http)
+16:43:46.733 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-44850"]
+16:43:46.733 INFO  {main} [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+16:43:46.733 INFO  {main} [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.26]
+16:43:46.827 INFO  {main} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring embedded WebApplicationContext
+16:43:46.827 INFO  {main} [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 702 ms
+16:43:46.967 INFO  {main} [o.s.s.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+16:43:47.014 INFO  {main} [o.s.b.a.w.s.WelcomePageHandlerMapping] Adding welcome page template: index
+16:43:47.170 INFO  {main} [o.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-44850"]
+16:43:47.201 INFO  {main} [o.s.b.w.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 44850 (http) with context path '/gtjobsched'
+16:43:47.201 INFO  {main} [g.jobman.sched.JobSchedulerApplication] Started JobSchedulerApplication in 1.528 seconds (JVM running for 2.772)
+16:43:47.248 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 开始archive()...
+16:43:47.248 INFO  {main} [g.j.core.scheduler.main.FlatJobPersister] 结束archive().
+16:43:47.357 INFO  {main} [g.j.core.test.DummyJobDispatcherFactory] class gtcloud.jobman.core.test.DummyJobDispatcherFactory.initialize() called.
+16:43:47.357 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] runCommandLoop() begin, interval=10000(ms)
+16:44:24.917 INFO  {http-nio-44850-exec-1} [o.a.c.c.C.[.[localhost].[/gtjobsched]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:44:24.917 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+16:44:24.917 INFO  {http-nio-44850-exec-1} [o.s.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+16:44:37.508 INFO  {Thread-11} [g.jobman.core.test.DummyJobDispatcher] splitJob() called, jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, jobCate=DUMMY_JOB_CATEGORY
+16:44:37.758 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, seq=1/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-d89054688347ce89-d] OK.
+16:44:37.774 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, seq=2/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-d89054688347ce89-d] OK.
+16:44:37.789 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, seq=3/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-d89054688347ce89-d] OK.
+16:44:37.805 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, seq=4/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-d89054688347ce89-d] OK.
+16:44:37.820 INFO  {Thread-11} [g.j.core.scheduler.main.JobScheduler] sendSubjobDispatchReq[jobId=46916dd7-d60a-4795-8f7e-6f844a9bb7f1, seq=5/10, jobCategory=DUMMY_JOB_CATEGORY, priority=1, retryTimes=0] to [subjobproc-129.0.3.135-d89054688347ce89-d] OK.

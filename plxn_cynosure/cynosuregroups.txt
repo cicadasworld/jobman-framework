@@ -1,0 +1,5 @@
+#
+#若要修改Cynosure的组名，需要同时修改以下文件:
+#
+.\webetc\cynosure\main.properties
+.\etc\resbundles\gt4.cynosure\main.properties

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<!-- THIS FILE WAS GENERATED AT 2020/05/20 18:08:54 AUTOMATICALLY. -->
+
+<application>
+    <app-params>
+        <param name="version" value="V1.2.0" />
+        <param name="name" value="plxn_cynosure" />
+        <param name="displayName" value="plxn_cynosure" />
+        <param name="description" value="plxn_cynosure的描述。" />
+        <param name="logo" value="plxn_cynosure, GT Group" />
+    </app-params>
+</application>

@@ -1,0 +1,57 @@
+
+body {
+    background-color:#ffffff;
+    color:#353833;
+    font-size:14px;
+    margin:0;
+}
+a:link, a:visited {
+    text-decoration:none;
+    color:#4A6782;
+}
+a:hover, a:focus {
+    text-decoration:none;
+    color:#bb7a2a;
+}
+a:active {
+    text-decoration:none;
+    color:#4A6782;
+}
+a[name] {
+    color:#353833;
+}
+a[name]:hover {
+    text-decoration:none;
+    color:#353833;
+}
+
+.mapTable {
+    border-right: 1px solid #BB88BB;
+    border-bottom: 1px solid #BB88BB;
+}
+
+.mapTd {
+    border-left: 1px solid #BB88BB;
+    border-top: 1px solid #BB88BB;
+}
+
+.mapTdWarn {
+    border-left: 1px solid #BB88BB;
+    border-top: 1px solid #BB88BB;
+    background: #FF8888;
+}
+
+.mapTr_0 {
+    background: #EEEEFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mapTr {
+    text-align: center;
+}
+
+.jobTr {
+    text-align: left;
+}
+

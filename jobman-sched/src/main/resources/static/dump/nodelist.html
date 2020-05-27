@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="t.css" title="Style">
+    <script type="text/javascript" src="t.js"></script>
+
+<script type="text/javascript">
+
+
+function do_init()
+{
+    const addr = top.gtdump.appBaseURL + 'node/status?encoding=utf-8';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', addr, true);
+
+    const hasJSON = (typeof JSON === "object");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            if (hasJSON) {
+                var result = JSON.parse(xhr.responseText);
+            } else {
+                var json = 'var result=' + xhr.responseText;
+                eval(json);
+            }
+            if (result.retcode != 0) {
+                alert("Error: " + result.retmsg);
+            } else {
+                var main_div = document.getElementById('main_div');
+                var caption = '&nbsp;&nbsp;处理节点列表';
+                dumper_add_section(main_div, caption);
+                dumper_add_separator(main_div);
+                list_nodes(main_div, result.retdata);
+            }
+        }
+    };
+    xhr.send();
+}
+
+function list_nodes(main_div, nodeList)
+{
+    var table = document.createElement('table');
+    table.className = 'mapTable';
+    main_div.appendChild(table);
+
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
+    // title row
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr_0';
+
+    var cols = [
+        "seqNo", "nodeId", "millisSinceLastAlive", "isAlive", "subjobQueueLength"
+    ];
+
+    for (var c = 0; c < cols.length; ++ c) {
+        var td = document.createElement("td");
+        td.className = "mapTd";
+        td.innerHTML = cols[c];
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+
+    var counter = { value: 0 };
+    for (var t=0; t<nodeList.length; t++) {
+        var node = nodeList[t];
+        create_node_row(tbody, node, cols, counter);
+    }
+}
+
+function create_node_row(tbody, node, colNames, counter)
+{
+    var tr = document.createElement("tr");
+    tr.className =  'mapTr';
+    tbody.appendChild(tr);
+
+    for (var i=0; i<colNames.length; ++i) {
+        let colName = colNames[i];
+        let innerHTML = null;
+
+        if (colName == 'seqNo') {
+            innerHTML = '' + counter.value;
+        }
+        else if (colName == 'nodeId') {
+            innerHTML = '' + node.nodeId;
+        }
+        else if (colName == 'millisSinceLastAlive') {
+            innerHTML = '' + node.millisSinceLastAlive;
+        }
+        else if (colName == 'isAlive') {
+            innerHTML = '' + node.isAlive;
+        }
+        else if (colName == 'subjobQueueLength') {
+            innerHTML = '' + node.subjobQueueLength;
+        }
+        
+        if (innerHTML != null) {
+            var td = document.createElement("td");
+            td.className =  'mapTd';
+            td.innerHTML = innerHTML;
+            tr.appendChild(td);
+        }
+    }
+    counter.value += 1;
+}
+
+</script>
+
+</head>
+
+<body onload="do_init();">
+    <div id="main_div">
+    </div>
+</body>
+</html>

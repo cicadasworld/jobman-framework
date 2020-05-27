@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE configuration>
+
+<!-- 需要 GTCLOUD_LOG_DIR、GTCLOUD_APP_NAME 两个系统属性-->
+
+<configuration scan="true" debug="false">
+
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${GTCLOUD_LOG_DIR}/${GTCLOUD_APP_NAME}.log</File>
+        <append>true</append>
+        <encoder>
+            <charset>gbk</charset>
+            <pattern>%d{HH:mm:ss.SSS} %-5level {%thread} [%logger{40}] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${GTCLOUD_LOG_DIR}/archive/${GTCLOUD_APP_NAME}-%d{yyyyMMdd}-%i.log.zip</fileNamePattern>
+            <maxHistory>10</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>20MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!-- TRACE, DEBUG, INFO, WARN, ERROR, ALL, OFF -->
+    <root level="info">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+    <!--
+    <logger name="gtcloud.jobman.proc.JobProcessorController" level="DEBUG"/>
+    <logger name="gtcloud.jobman.proc.LocalProccessNodeHelperImpl" level="DEBUG"/>
+    <logger name="org.springframework.web.context.support" level="ERROR"/>
+    <logger name="org.springframework.beans.factory.support" level="ERROR"/>
+    <logger name="com.dudu.controller.LearnController" level="WARN" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+    -->
+
+</configuration>
+

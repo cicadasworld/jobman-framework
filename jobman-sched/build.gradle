@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        maven {
+            name 'Custom Maven Repository'
+            url System.getenv('MAVEN_REPO_HOME')
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'jobman-sched'
+version = '1.0.0'
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")    
+    compile project(":jobman-core")
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "gbk"
+}
